@@ -19,11 +19,11 @@ import javax.validation.constraints.NotNull;
  *
  */
 @Entity
-@Table(name="adopcion_persona")
-public class Adopcion_Persona {
+@Table(name="adopcion_humano")
+public class Adopcion_Humano {
 	
 	@Id
-	@Column(name="idadopcion_persona")
+	@Column(name="idadopcion_humano")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	

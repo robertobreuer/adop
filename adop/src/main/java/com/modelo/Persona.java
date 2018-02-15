@@ -1,5 +1,10 @@
 package com.modelo;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +19,7 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name="persona")
-public class Persona {
+public class Persona  {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,6 +43,50 @@ public class Persona {
 	@NotNull
 	@Column(name="password")
 	private String password;
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getNombre_usuario() {
+		return nombre_usuario;
+	}
+
+	public void setNombre_usuario(String nombre_usuario) {
+		this.nombre_usuario = nombre_usuario;
+	}
+
+	public long getCelular() {
+		return celular;
+	}
+
+	public void setCelular(long celular) {
+		this.celular = celular;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public long getId() {
+		return id;
+	}
 	
-	// faltan setter y getter
+	
 }
